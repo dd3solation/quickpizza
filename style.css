@@ -290,6 +290,12 @@ footer {
     transition: opacity 0.35s ease;
     z-index: 9999;
 }
+.theme-fade {
+    pointer-events: none !important;
+}
+.theme-fade.active {
+    pointer-events: none;
+}
 
 .theme-fade.active {
     opacity: 1;
@@ -542,6 +548,7 @@ body:not(.dark) .trust-card {
         opacity: 1;
     }
 }
+
 
 
 
