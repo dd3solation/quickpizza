@@ -541,6 +541,14 @@ section h2 {
     height: 36px;
   }
 }
+body.light .hero h1 {
+  color: #111;
+}
+
+body.light .hero p {
+  color: #444;
+}
+
 
 
 
