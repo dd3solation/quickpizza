@@ -14,13 +14,14 @@ body {
 /* HERO */
 
 .hero {
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 32px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 20px;
 }
 
 .logo {
@@ -153,3 +154,4 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
