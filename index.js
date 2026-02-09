@@ -1,6 +1,7 @@
 <script>
 const toggle = document.getElementById('themeToggle');
 const body = document.body;
+const fade = document.getElementById('themeFade');
 
 // загрузка сохранённой темы
 if (localStorage.getItem('theme') === 'dark') {
@@ -8,16 +9,25 @@ if (localStorage.getItem('theme') === 'dark') {
     toggle.textContent = '☀️';
 }
 
-// переключение
 toggle.addEventListener('click', () => {
-    body.classList.toggle('dark');
+    // включаем затемнение
+    fade.classList.add('active');
 
-    if (body.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
-        toggle.textContent = '☀️';
-    } else {
-        localStorage.setItem('theme', 'light');
-        toggle.textContent = '🌙';
-    }
+    setTimeout(() => {
+        body.classList.toggle('dark');
+
+        if (body.classList.contains('dark')) {
+            localStorage.setItem('theme', 'dark');
+            toggle.textContent = '☀️';
+        } else {
+            localStorage.setItem('theme', 'light');
+            toggle.textContent = '🌙';
+        }
+    }, 180);
+
+    // убираем затемнение
+    setTimeout(() => {
+        fade.classList.remove('active');
+    }, 360);
 });
 </script>
