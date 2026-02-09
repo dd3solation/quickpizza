@@ -79,6 +79,7 @@ document.querySelectorAll('.product-card').forEach(card => {
     });
 });
 
+
 closeBtn.addEventListener('click', closeModal);
 modal.addEventListener('click', e => {
     if (e.target === modal) closeModal();
@@ -91,6 +92,7 @@ function closeModal() {
     modal.classList.remove('active');
     document.body.style.overflow = '';
 }
+
 
 
 
