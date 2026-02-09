@@ -268,7 +268,7 @@ footer {
     inset: 0;
     background: rgba(0,0,0,0.4);
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none; /* ВАЖНО */
     transition: opacity 0.35s ease;
     z-index: 9999;
 }
@@ -302,3 +302,4 @@ body:not(.dark) .for-card {
     background: var(--card-bg);
     color: var(--text-main);
 }
+
