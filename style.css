@@ -434,6 +434,30 @@ body:not(.dark) .for-card {
 .products {
     overflow: visible;
 }
+/* FIX: читаемость блока "Почему нам доверяют" в светлой теме */
+body:not(.dark) .trust {
+    background: var(--bg-secondary);
+    color: var(--text-main);
+}
+
+body:not(.dark) .trust h2 {
+    color: var(--text-main);
+}
+
+body:not(.dark) .trust-card {
+    background: #ffffff;
+    color: #111111;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.trust-card {
+    font-weight: 500;
+}
+
+.trust-card span,
+.trust-card emoji {
+    opacity: 0.9;
+}
+
 
 
 
