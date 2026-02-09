@@ -52,66 +52,46 @@ const revealOnScroll = () => {
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
-const cards = document.querySelectorAll('.product-card');
 const modal = document.getElementById('pizzaModal');
+const closeBtn = document.getElementById('modalClose');
 
+const modalImg = document.getElementById('modalImg');
 const modalTitle = document.getElementById('modalTitle');
 const modalDesc = document.getElementById('modalDesc');
-const modalImg = document.getElementById('modalImg');
 const modalKcal = document.getElementById('modalKcal');
 const modalProtein = document.getElementById('modalProtein');
 const modalFat = document.getElementById('modalFat');
 const modalCarb = document.getElementById('modalCarb');
 
-let currentIndex = 0;
-let portion = 1;
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', () => {
+        modalTitle.textContent = card.dataset.title;
+        modalDesc.textContent = card.dataset.desc;
+        modalImg.src = card.dataset.img;
 
-const pizzas = Array.from(cards);
+        modalKcal.textContent = card.dataset.kcal;
+        modalProtein.textContent = card.dataset.protein;
+        modalFat.textContent = card.dataset.fat;
+        modalCarb.textContent = card.dataset.carb;
 
-function openModal(index) {
-  const p = pizzas[index];
-  currentIndex = index;
-
-  modalTitle.textContent = p.dataset.title;
-  modalDesc.textContent = p.dataset.desc;
-  modalImg.src = p.dataset.img;
-
-  updateNutrition(p);
-  modal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function updateNutrition(p) {
-  modalKcal.textContent = Math.round(p.dataset.kcal * portion);
-  modalProtein.textContent = Math.round(p.dataset.protein * portion);
-  modalFat.textContent = Math.round(p.dataset.fat * portion);
-  modalCarb.textContent = Math.round(p.dataset.carb * portion);
-}
-
-cards.forEach((card, i) => {
-  card.addEventListener('click', () => openModal(i));
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
 });
 
-document.getElementById('modalClose').onclick = () => {
-  modal.classList.remove('active');
-  document.body.style.overflow = '';
-};
-
-document.getElementById('prevPizza').onclick = () =>
-  openModal((currentIndex - 1 + pizzas.length) % pizzas.length);
-
-document.getElementById('nextPizza').onclick = () =>
-  openModal((currentIndex + 1) % pizzas.length);
-
-document.querySelectorAll('.portion-btn').forEach(btn => {
-  btn.onclick = () => {
-    document.querySelectorAll('.portion-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    portion = btn.dataset.mode === 'full' ? 4 : 1;
-    updateNutrition(pizzas[currentIndex]);
-  };
+closeBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+});
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
 });
 
-document.getElementById('themeToggle').onclick = () => {
-  document.body.classList.toggle('light');
-};
+function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+
+
+
