@@ -5,102 +5,131 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
+/* =====================
+   GLOBAL
+===================== */
+
 body {
-    background: #000;
-    color: #fff;
-    line-height: 1.5;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.6;
 }
 
-/* HERO */
+/* =====================
+   HERO (чёрный экран)
+===================== */
 
 .hero {
     min-height: 100vh;
+    background: #000;
+    color: #fff;
     padding: 32px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 20px;
+    gap: 24px;
 }
 
+/* Логотип */
 .logo {
-    width: 220px;
-    margin-bottom: 20px;
+    width: 160px;
+    opacity: 0.9;
 }
 
+/* Гифка по центру */
+.hero-img {
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    border-radius: 18px;
+}
+
+/* Заголовок */
 .hero h1 {
     font-size: clamp(1.8rem, 5vw, 2.6rem);
-    margin-bottom: 12px;
+    font-weight: 700;
 }
 
+/* Подзаголовок */
 .hero p {
     color: #ccc;
-    max-width: 500px;
+    max-width: 560px;
+    font-size: 1rem;
 }
-/* ABOUT */
+
+/* =====================
+   SECTION: ABOUT
+===================== */
 
 .about {
-    padding: 48px 16px;
-    background: #111;
+    background: #f2f2f2;
+    padding: 72px 16px;
     text-align: center;
 }
 
 .about h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 16px;
 }
 
 .about p {
-    max-width: 700px;
-    margin: 0 auto 20px;
-    color: #ddd;
+    max-width: 760px;
+    margin: 0 auto 28px;
+    color: #333;
 }
 
+/* Бейджи */
 .badges {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
     justify-content: center;
-    margin-bottom: 20px;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
 .badges span {
-    background: #1a1a1a;
-    padding: 10px 14px;
+    background: #e6e6e6;
+    color: #111;
+    padding: 10px 16px;
     border-radius: 999px;
     font-size: 0.9rem;
 }
 
 .city {
-    color: #aaa;
+    color: #666;
 }
 
-/* PRODUCTS */
+/* =====================
+   PRODUCTS (белый фон)
+===================== */
 
 .products {
-    padding: 48px 16px;
+    padding: 72px 16px;
+    background: #ffffff;
     text-align: center;
 }
 
 .products h2 {
-    margin-bottom: 30px;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-bottom: 40px;
 }
 
 .product-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
 }
 
 .product-card {
-    background: #1a1a1a;
-    padding: 24px;
+    background: #fafafa;
     border-radius: 18px;
+    padding: 24px;
     text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
 .product-card h3 {
@@ -109,50 +138,47 @@ body {
 }
 
 .product-card p {
-    color: #ccc;
+    color: #555;
 }
 
-/* FEATURES */
+/* =====================
+   FEATURES (серый блок)
+===================== */
 
 .features {
-    padding: 48px 16px;
-    background: #0e0e0e;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 72px 16px;
     text-align: center;
 }
 
 .features h2 {
-    margin-bottom: 24px;
+    font-size: 2rem;
+    margin-bottom: 32px;
 }
 
 .feature-list {
-    display: grid;
-    gap: 12px;
     max-width: 700px;
     margin: 0 auto;
+    display: grid;
+    gap: 16px;
 }
 
 .feature {
-    background: #1a1a1a;
-    padding: 14px 18px;
-    border-radius: 14px;
+    background: #222;
+    padding: 18px 22px;
+    border-radius: 16px;
+    font-size: 1rem;
 }
 
-/* FOOTER */
+/* =====================
+   FOOTER
+===================== */
 
 footer {
+    background: #000;
+    color: #777;
     padding: 24px 16px;
     text-align: center;
     font-size: 0.85rem;
-    color: #777;
 }
-
-/* DESKTOP */
-
-@media (min-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-
