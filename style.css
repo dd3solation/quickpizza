@@ -38,7 +38,12 @@ body {
     color: #ccc;
     max-width: 500px;
 }
-
+.hero-img {
+    max-width: 420px;
+    width: 90%;
+    height: auto;
+    border-radius: 16px;
+}
 /* ABOUT */
 
 .about {
@@ -154,4 +159,5 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 
