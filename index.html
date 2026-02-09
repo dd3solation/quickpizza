@@ -1,130 +1,228 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuickPizza</title>
-  <link rel="stylesheet" href="style.css">
+    <!-- FAVICON -->
+<link rel="icon" type="image/png" href="quickpizza.png">
+<link rel="apple-touch-icon" href="quickpizza.png">
+
+    <meta charset="UTF-8">
+    <title>QuickPizza — готовая пицца</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="dark">
+<!-- FADE OVERLAY -->
+<div class="theme-fade" id="themeFade"></div>
 
-<button class="theme-toggle" id="themeToggle">🌙</button>
+<!-- THEME TOGGLE -->
+<button class="theme-toggle" id="themeToggle" aria-label="Сменить тему">🌙</button>
 
+<!-- HERO -->
 <header class="hero">
-  <h1>Пицца, которую хочется есть</h1>
-  <p>Готовый продукт. Настоящий вкус. Без компромиссов.</p>
+    <div class="hero-content">
+        <h1>Вкус, который не заставляет ждать</h1>
+        <p>Готовый продукт. Настоящий вкус. Без компромиссов.</p>
+    </div>
 </header>
 
-<section class="products">
-  <h2>Линейка пицц</h2>
+<!-- ABOUT -->
+<section class="about">
+    <h2>Что такое QuickPizza?</h2>
+    <p>
+        QuickPizza — это готовая пицца из свежих ингредиентов,
+        созданная как продукт для магазинов.
+    </p>
+
+    <div class="badges">
+        <span>🍅 Свежие продукты</span>
+        <span>🧀 Настоящий сыр</span>
+        <span>❄️ Удобно хранить</span>
+        <span>🔥 Легко приготовить</span>
+    </div>
+
+    <p class="city">📍 Производство: Нижний Новгород</p>
+</section>
+
 <!-- PRODUCTS -->
 <section class="products">
-  <h2>Линейка пицц</h2>
+    <h2>Линейка пицц</h2>
 
-  <div class="product-row">
+    <div class="product-row">
+        <div class="product-card">
+            <span class="tag hot">Хит</span>
+            <h3>Пиканте Пепперони</h3>
+            <p>Острая пепперони, тянущийся сыр и томатный соус.</p>
+        </div>
+
+        <div class="product-card">
+            <h3>Рустикале с грибами</h3>
+            <p>Ароматные грибы и сливочный соус.</p>
+        </div>
+
+        <div class="product-card">
+            <span class="tag new">Новинка</span>
+            <h3>Морская Фрешь</h3>
+            <p>Лёгкий морской вкус и свежие нотки.</p>
+        </div>
+
+        <div class="product-card">
+            <h3>4 Сыра</h3>
+            <p>Баланс из четырёх видов сыра.</p>
+        </div>
+
+        <div class="product-card">
+            <h3>Кантри с барбекю</h3>
+            <p>Мясная начинка и дымный BBQ.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SLOGAN -->
+<section class="slogan">
+    <h2>QuickPizza — когда хочется пиццу, а не ожидание</h2>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+    <h2 class="reveal">Почему нам доверяют</h2>
+
+    <div class="trust-row">
+        <div class="trust-card reveal stagger">✔ Контроль качества</div>
+        <div class="trust-card reveal stagger">🥬 Свежие ингредиенты</div>
+        <div class="trust-card reveal stagger">🇷🇺 Производство в России</div>
+        <div class="trust-card reveal stagger">🏪 Формат для магазинов</div>
+    </div>
+</section>
+
+<!-- FOR WHO -->
+<section class="for-who">
+    <h2>Для кого QuickPizza?</h2>
+
+    <div class="for-who-cards">
+        <div class="for-card">👨‍👩‍👧<span>Для семьи</span></div>
+        <div class="for-card">🎮<span>Для друзей</span></div>
+        <div class="for-card">🎬<span>Для киноночей</span></div>
+        <div class="for-card">⏱<span>Когда нет времени готовить</span></div>
+    </div>
+</section>
+
+<!-- FUTURE -->
+<section class="future">
+    <h2>Мы растём дальше</h2>
+    <p>
+        Сегодня — Нижний Новгород.  
+        Завтра — новые города и торговые сети.
+    </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© QuickPizza, 2026</p>
+    <p>Доступно в магазинах вашего города</p>
+</footer>
+
+<script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+<div class="modal" id="pizzaModal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">×</button>
+
+        <img id="modalImg" alt="Пицца">
+
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+
+        <div class="nutrition">
+            <div>🔥 <strong id="modalKcal"></strong> ккал</div>
+            <div>🥩 Б: <strong id="modalProtein"></strong> г</div>
+            <div>🧈 Ж: <strong id="modalFat"></strong> г</div>
+            <div>🍞 У: <strong id="modalCarb"></strong> г</div>
+        </div>
+    </div>
+</div>
+
+</html>
+<div class="product-row">
 
     <!-- Пиканте Пепперони -->
     <div class="product-card reveal stagger"
          data-title="Пиканте Пепперони"
-         data-desc="Острая пепперони, тянущийся сыр и насыщенный томатный соус. Яркий, насыщенный вкус."
          data-img="img/pikante.png"
+         data-desc="Острая пепперони, тянущийся сыр и насыщенный томатный соус. Яркий и насыщенный вкус."
          data-kcal="265"
          data-protein="11"
          data-fat="12"
          data-carb="26">
 
-      <span class="tag hot">Хит</span>
-      <h3>Пиканте Пепперони</h3>
-      <p>Острая пепперони и томатный соус.</p>
+        <span class="tag hot">Хит</span>
+        <h3>Пиканте Пепперони</h3>
+        <p>Острая пепперони и томатный соус.</p>
     </div>
 
     <!-- Рустикале с грибами -->
     <div class="product-card reveal stagger"
          data-title="Рустикале с грибами"
-         data-desc="Ароматные грибы, сливочный соус и нежный сыр в деревенском стиле."
          data-img="img/mushroom.png"
+         data-desc="Ароматные грибы, сливочный соус и нежный сыр в деревенском стиле."
          data-kcal="240"
          data-protein="9"
          data-fat="11"
          data-carb="24">
 
-      <h3>Рустикале с грибами</h3>
-      <p>Грибы и сливочный соус.</p>
+        <h3>Рустикале с грибами</h3>
+        <p>Грибы и сливочный соус.</p>
     </div>
 
-    <!-- Морская Фреш -->
+    <!-- Морская Фрешь -->
     <div class="product-card reveal stagger"
-         data-title="Морская Фреш"
-         data-desc="Лёгкий морской вкус и свежие нотки. Нежный и сбалансированный вариант."
+         data-title="Морская Фрешь"
          data-img="img/seafood.png"
+         data-desc="Лёгкий морской вкус, нежная начинка и свежие нотки."
          data-kcal="230"
-         data-protein="10"
+         data-protein="12"
          data-fat="9"
-         data-carb="25">
+         data-carb="22">
 
-      <span class="tag new">Новинка</span>
-      <h3>Морская Фреш</h3>
-      <p>Свежие морские нотки.</p>
+        <span class="tag new">Новинка</span>
+        <h3>Морская Фрешь</h3>
+        <p>Свежий морской вкус.</p>
     </div>
 
     <!-- 4 Сыра -->
     <div class="product-card reveal stagger"
          data-title="4 Сыра"
-         data-desc="Сливочный баланс из четырёх видов сыра. Мягкий и насыщенный вкус."
          data-img="img/cheese.png"
+         data-desc="Сливочный баланс из четырёх видов сыра с насыщенным вкусом."
          data-kcal="280"
          data-protein="13"
          data-fat="14"
-         data-carb="22">
+         data-carb="25">
 
-      <h3>4 Сыра</h3>
-      <p>Баланс четырёх сыров.</p>
+        <h3>4 Сыра</h3>
+        <p>Баланс из четырёх видов сыра.</p>
     </div>
 
     <!-- Кантри с барбекю -->
     <div class="product-card reveal stagger"
          data-title="Кантри с барбекю"
-         data-desc="Сочная мясная начинка и дымный соус BBQ с ярким ароматом."
          data-img="img/bbq.png"
-         data-kcal="290"
+         data-desc="Мясная начинка, тянущийся сыр и дымный соус BBQ."
+         data-kcal="295"
          data-protein="14"
          data-fat="15"
          data-carb="27">
 
-      <h3>Кантри с барбекю</h3>
-      <p>Мясо и дымный BBQ.</p>
+        <h3>Кантри с барбекю</h3>
+        <p>Мясная начинка и соус BBQ.</p>
     </div>
 
-  </div>
-</section>
-
-<!-- MODAL -->
-<div class="modal" id="pizzaModal">
-  <div class="modal-content">
-    <button class="modal-close" id="modalClose">×</button>
-
-    <button class="modal-nav prev" id="prevPizza">‹</button>
-    <button class="modal-nav next" id="nextPizza">›</button>
-
-    <img id="modalImg" alt="Пицца">
-    <h2 id="modalTitle"></h2>
-    <p id="modalDesc"></p>
-
-    <div class="portion-toggle">
-      <button class="portion-btn active" data-mode="100">На 100 г</button>
-      <button class="portion-btn" data-mode="full">На пиццу</button>
-    </div>
-
-    <div class="nutrition">
-      <div>🔥 <strong id="modalKcal"></strong> ккал</div>
-      <div>🥩 <strong id="modalProtein"></strong> г</div>
-      <div>🧈 <strong id="modalFat"></strong> г</div>
-      <div>🍞 <strong id="modalCarb"></strong> г</div>
-    </div>
-  </div>
 </div>
 
-<script src="script.js"></script>
-</body>
-</html>
+
+
+
