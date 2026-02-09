@@ -281,21 +281,16 @@ footer {
 /* =====================
    FADE OVERLAY
 ===================== */
-.theme-fade {
+..theme-fade {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.4);
     opacity: 0;
-    pointer-events: none; /* ВАЖНО */
-    transition: opacity 0.35s ease;
-    z-index: 9999;
-}
-.theme-fade {
     pointer-events: none !important;
+    transition: opacity 0.35s ease;
+    z-index: 1; /* ВАЖНО */
 }
-.theme-fade.active {
-    pointer-events: none;
-}
+
 
 .theme-fade.active {
     opacity: 1;
@@ -548,6 +543,17 @@ body:not(.dark) .trust-card {
         opacity: 1;
     }
 }
+.product-row {
+    position: relative;
+    z-index: 2;
+}
+
+.product-card {
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+
 
 
 
