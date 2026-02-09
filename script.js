@@ -29,22 +29,30 @@ toggle.addEventListener('click', () => {
     }, 360);
 });
 // SCROLL REVEAL
+// SCROLL REVEAL + STAGGER
 const reveals = document.querySelectorAll('.reveal');
 
 const revealOnScroll = () => {
     const windowHeight = window.innerHeight;
 
-    reveals.forEach(el => {
+    reveals.forEach((el, index) => {
         const elementTop = el.getBoundingClientRect().top;
         const revealPoint = 120;
 
         if (elementTop < windowHeight - revealPoint) {
             el.classList.add('active');
+
+            // stagger-задержка
+            if (el.classList.contains('stagger')) {
+                el.style.setProperty('--delay', `${index * 0.12}s`);
+            }
         }
     });
 };
 
 window.addEventListener('scroll', revealOnScroll);
-revealOnScroll(); // при загрузке
+revealOnScroll();
+
+
 
 
