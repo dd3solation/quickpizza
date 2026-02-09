@@ -1,29 +1,26 @@
 /* =========================
    THEME TOGGLE
-========================= */
-const themeBtn = document.querySelector('.theme-toggle');
-const body = document.body;
-
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light') {
-  body.classList.add('light');
-}
 const toggle = document.querySelector('.theme-toggle');
 const body = document.body;
 
+// стартовая тема
+if (!body.classList.contains('dark') && !body.classList.contains('light')) {
+  body.classList.add('dark');
+}
+
+// клик по кнопке
 toggle.addEventListener('click', () => {
-  body.classList.toggle('light');
-  body.classList.toggle('dark');
+  if (body.classList.contains('dark')) {
+    body.classList.remove('dark');
+    body.classList.add('light');
+    toggle.textContent = '🌙';
+  } else {
+    body.classList.remove('light');
+    body.classList.add('dark');
+    toggle.textContent = '☀️';
+  }
 });
 
-
-themeBtn.addEventListener('click', () => {
-  body.classList.toggle('light');
-  localStorage.setItem(
-    'theme',
-    body.classList.contains('light') ? 'light' : 'dark'
-  );
-});
 
 /* =========================
    REVEAL + STAGGER ON SCROLL
@@ -161,4 +158,5 @@ nextBtn.addEventListener('click', e => {
   e.stopPropagation();
   switchPizza(1);
 });
+
 
