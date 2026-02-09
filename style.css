@@ -483,5 +483,21 @@ section h2 {
     font-size: 0.95rem;
   }
 }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  transition: background 0.4s ease;
+}
+
+/* ТЁМНАЯ ТЕМА */
+[data-theme="dark"] .hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* СВЕТЛАЯ ТЕМА */
+[data-theme="light"] .hero-overlay {
+  background: rgba(255, 255, 255, 0.55);
+}
+
 
 
