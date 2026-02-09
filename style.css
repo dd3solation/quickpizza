@@ -1,3 +1,35 @@
+/* =====================
+   CSS VARIABLES (ТЕМЫ)
+===================== */
+
+:root {
+    --bg-main: #ffffff;
+    --bg-secondary: #f2f2f2;
+    --bg-dark: #000000;
+
+    --card-bg: #ffffff;
+    --card-dark: #141414;
+
+    --text-main: #111111;
+    --text-secondary: #555555;
+    --text-light: #ffffff;
+
+    --accent: #e63946;
+}
+
+/* ТЁМНАЯ ТЕМА */
+body.dark {
+    --bg-main: #0b0b0b;
+    --bg-secondary: #121212;
+    --bg-dark: #000000;
+
+    --card-bg: #141414;
+    --card-dark: #1a1a1a;
+
+    --text-main: #eaeaea;
+    --text-secondary: #bdbdbd;
+    --text-light: #ffffff;
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,39 +39,42 @@
 
 /* GLOBAL */
 body {
-    background: #0b0b0b;
-    color: #eaeaea;
-    line-height: 1.6;
+    background: var(--bg-main);
+    color: var(--text-main);
 }
 
-/* HERO */
 .hero {
-    min-height: 100vh;
     background:
         linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
         url("img/pepperoni.gif") center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 40px 16px;
+    color: var(--text-light);
 }
 
-.hero h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    margin-bottom: 12px;
+.about {
+    background: var(--bg-secondary);
 }
 
-.hero p {
-    color: #ccc;
+.products {
+    background: var(--bg-dark);
 }
 
-/* SECTIONS */
-section {
-    padding: 80px 16px;
-    text-align: center;
+.product-card {
+    background: var(--card-bg);
+    color: var(--text-main);
 }
 
+.trust {
+    background: var(--bg-secondary);
+}
+
+.for-who {
+    background: var(--bg-dark);
+}
+
+footer {
+    background: var(--bg-dark);
+    color: var(--text-secondary);
+}
 /* ABOUT */
 .about {
     background: #121212;
@@ -168,4 +203,27 @@ footer {
     font-size: 0.85rem;
     color: #777;
 }
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
 
+    background: var(--card-bg);
+    color: var(--text-main);
+
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
