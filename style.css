@@ -479,52 +479,6 @@ section h2 {
   transition: background 0.4s ease;
 }
 
-/* ТЁМНАЯ ТЕМА */
-[data-theme="dark"] .hero-overlay {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-/* СВЕТЛАЯ ТЕМА */
-[data-theme="light"] .hero-overlay {
-  background: rgba(255, 255, 255, 0.55);
-}
-.hero h1,
-.hero p {
-  transition: color 0.4s ease;
-}
-
-/* ТЁМНАЯ */
-[data-theme="dark"] .hero h1,
-[data-theme="dark"] .hero p {
-  color: #fff;
-}
-
-/* СВЕТЛАЯ */
-[data-theme="light"] .hero h1,
-[data-theme="light"] .hero p {
-  color: #111;
-}
-.hero-overlay {
-  backdrop-filter: blur(2px);
-}
-.site-header {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 1000;
-}
-
-.logo {
-  height: 44px;
-  width: auto;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
-}
-
 /* Мобильная версия */
 @media (max-width: 768px) {
   .logo {
@@ -583,6 +537,7 @@ body.light .feature {
 .feature emoji {
   font-size: 1.2rem;
 }
+
 
 
 
