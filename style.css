@@ -542,6 +542,52 @@ body.light .hero h1 {
 body.light .hero p {
   color: #444;
 }
+/* FEATURE BUTTONS / CARDS */
+.feature {
+  padding: 14px 18px;
+  border-radius: 14px;
+
+  background: var(--bg-card);
+  color: var(--text-main);
+
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: var(--shadow-soft);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: 
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Hover — аккуратно, без «выпрыгивания» */
+.feature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+/* DARK THEME */
+body.dark .feature {
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.04);
+}
+
+/* LIGHT THEME */
+body.light .feature {
+  border: 1px solid rgba(0,0,0,0.12);
+  background: #ffffff;
+}
+
+/* Иконки — чуть ярче */
+.feature span,
+.feature emoji {
+  font-size: 1.2rem;
+}
+
 
 
 
