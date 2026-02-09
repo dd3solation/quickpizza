@@ -18,16 +18,7 @@ html, body {
    THEME VARIABLES
 ========================= */
 :root {
-  --bg-main: #0b0b0b;
-  --bg-soft: #121212;
-  --bg-card: #181818;
-  --bg-card-hover: #1f1f1f;
-
-  --text-main: #ffffff;
-  --text-secondary: #b3b3b3;
-
-  --accent: #ffb703;
-  --shadow-soft: 0 20px 40px rgba(0,0,0,0.35);
+  /* dark по умолчанию */
 }
 
 body.light {
@@ -548,6 +539,7 @@ body.light .hero h1 {
 body.light .hero p {
   color: #444;
 }
+
 
 
 
