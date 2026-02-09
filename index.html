@@ -9,92 +9,118 @@
 
 <body class="dark">
 
+<!-- Переключатель темы -->
 <button class="theme-toggle" id="themeToggle">🌙</button>
 
+<!-- HERO -->
 <header class="hero">
   <h1>Пицца, которую хочется есть</h1>
   <p>Готовый продукт. Настоящий вкус. Без компромиссов.</p>
 </header>
 
+<!-- PRODUCTS -->
 <section class="products">
   <h2>Линейка пицц</h2>
 
   <div class="product-row">
 
+    <!-- Пиканте Пепперони -->
     <div class="product-card reveal stagger"
          data-title="Пиканте Пепперони"
-         data-desc="Острая пепперони, тянущийся сыр и насыщенный томатный соус."
+         data-desc="Острая пепперони, тянущийся сыр и насыщенный томатный соус. Яркий, насыщенный вкус."
          data-img="img/pikante.png"
          data-kcal="265"
          data-protein="11"
          data-fat="12"
          data-carb="26">
+
       <span class="tag hot">Хит</span>
       <h3>Пиканте Пепперони</h3>
       <p>Острая пепперони и томатный соус.</p>
     </div>
 
+    <!-- Рустикале с грибами -->
     <div class="product-card reveal stagger"
          data-title="Рустикале с грибами"
-         data-desc="Ароматные грибы, сливочный соус и нежный сыр."
+         data-desc="Ароматные грибы, сливочный соус и нежный сыр в деревенском стиле."
          data-img="img/mushroom.png"
          data-kcal="240"
          data-protein="9"
          data-fat="11"
          data-carb="24">
+
       <h3>Рустикале с грибами</h3>
       <p>Грибы и сливочный соус.</p>
     </div>
 
+    <!-- Морская Фреш -->
     <div class="product-card reveal stagger"
          data-title="Морская Фреш"
-         data-desc="Лёгкий морской вкус и свежие нотки."
+         data-desc="Лёгкий морской вкус и свежие нотки. Нежный и сбалансированный вариант."
          data-img="img/sea.png"
          data-kcal="230"
          data-protein="10"
          data-fat="9"
          data-carb="25">
+
       <span class="tag new">Новинка</span>
       <h3>Морская Фреш</h3>
       <p>Свежие морские нотки.</p>
     </div>
 
+    <!-- 4 Сыра -->
     <div class="product-card reveal stagger"
          data-title="4 Сыра"
-         data-desc="Сливочный баланс из четырёх видов сыра."
+         data-desc="Сливочный баланс из четырёх видов сыра. Мягкий и насыщенный вкус."
          data-img="img/cheese.png"
          data-kcal="280"
          data-protein="13"
          data-fat="14"
          data-carb="22">
+
       <h3>4 Сыра</h3>
       <p>Баланс четырёх сыров.</p>
     </div>
 
+    <!-- Кантри с барбекю -->
     <div class="product-card reveal stagger"
          data-title="Кантри с барбекю"
-         data-desc="Сочная мясная начинка и дымный соус BBQ."
+         data-desc="Сочная мясная начинка и дымный соус BBQ с ярким ароматом."
          data-img="img/bbq.png"
          data-kcal="290"
          data-protein="14"
          data-fat="15"
          data-carb="27">
+
       <h3>Кантри с барбекю</h3>
-      <p>Мясо и BBQ.</p>
+      <p>Мясо и дымный BBQ.</p>
     </div>
 
+  </div>
+</section>
+
+<!-- WHY TRUST -->
+<section class="trust">
+  <h2>Почему нам доверяют</h2>
+
+  <div class="trust-row">
+    <div class="trust-card reveal stagger">✔ Контроль качества</div>
+    <div class="trust-card reveal stagger">🥬 Свежие ингредиенты</div>
+    <div class="trust-card reveal stagger">🇷🇺 Производство в России</div>
+    <div class="trust-card reveal stagger">🏪 Формат для магазинов</div>
   </div>
 </section>
 
 <!-- MODAL -->
 <div class="modal" id="pizzaModal">
   <div class="modal-content">
-    <button class="modal-close" id="modalClose">×</button>
 
+    <button class="modal-close" id="modalClose">×</button>
     <button class="modal-nav prev" id="prevPizza">‹</button>
     <button class="modal-nav next" id="nextPizza">›</button>
 
     <img id="modalImg" alt="Пицца">
+
     <h2 id="modalTitle"></h2>
     <p id="modalDesc"></p>
 
@@ -109,6 +135,7 @@
       <div>🧈 <strong id="modalFat"></strong> г</div>
       <div>🍞 <strong id="modalCarb"></strong> г</div>
     </div>
+
   </div>
 </div>
 
