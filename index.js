@@ -1,16 +1,15 @@
-<script>
 const toggle = document.getElementById('themeToggle');
 const body = document.body;
 const fade = document.getElementById('themeFade');
 
-// загрузка сохранённой темы
+// загрузка темы
 if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark');
     toggle.textContent = '☀️';
 }
 
+// переключение темы с fade
 toggle.addEventListener('click', () => {
-    // включаем затемнение
     fade.classList.add('active');
 
     setTimeout(() => {
@@ -25,9 +24,7 @@ toggle.addEventListener('click', () => {
         }
     }, 180);
 
-    // убираем затемнение
     setTimeout(() => {
         fade.classList.remove('active');
     }, 360);
 });
-</script>
