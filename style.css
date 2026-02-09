@@ -311,5 +311,117 @@ body:not(.dark) .for-card {
     background: var(--card-bg);
     color: var(--text-main);
 }
+/* SCROLL ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* =====================
+   MOBILE POLISH
+===================== */
+@media (max-width: 768px) {
+
+    /* Общие отступы */
+    section {
+        padding: 64px 14px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 1.25;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 0 14px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    /* BADGES */
+    .badges {
+        gap: 10px;
+    }
+
+    .badges span {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+
+    /* PRODUCT LINE */
+    .product-row {
+        justify-content: flex-start;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .product-card {
+        min-width: 220px;
+        padding: 20px;
+    }
+
+    /* TRUST ROW */
+    .trust-row {
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+
+    .trust-card {
+        min-width: 220px;
+        font-size: 0.9rem;
+    }
+
+    /* FOR WHO */
+    .for-who-cards {
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+
+    .for-card {
+        min-width: 200px;
+        padding: 24px 16px;
+    }
+
+    /* THEME BUTTON */
+    .theme-toggle {
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+
+    /* FOOTER */
+    footer p {
+        font-size: 0.85rem;
+    }
+}
+@media (hover: none) {
+    .product-card:hover,
+    .trust-card:hover,
+    .for-card:hover,
+    .badges span:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
 
 
