@@ -227,3 +227,26 @@ footer {
 .theme-toggle:hover {
     transform: scale(1.1);
 }
+/* =====================
+   FADE ПРИ СМЕНЕ ТЕМЫ
+===================== */
+
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* затемнение экрана */
+.theme-fade {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 998;
+}
+
+.theme-fade.active {
+    opacity: 1;
+}
+
