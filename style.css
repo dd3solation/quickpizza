@@ -162,28 +162,37 @@ section {
    TRUST
 ===================== */
 .trust {
-    background: var(--bg-main);
+    background: var(--bg-dark);
+    color: var(--text-light);
 }
 
-.trust-cards {
-    display: grid;
-    gap: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.trust-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 30px 0;
 }
 
 .trust-card {
     background: var(--card-bg);
-    padding: 26px;
-    border-radius: 20px;
+    min-width: 240px;
+    padding: 22px 26px;
+    border-radius: 18px;
     border: 1px solid var(--border-soft);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    flex-shrink: 0;
+
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .trust-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 /* =====================
@@ -302,4 +311,5 @@ body:not(.dark) .for-card {
     background: var(--card-bg);
     color: var(--text-main);
 }
+
 
