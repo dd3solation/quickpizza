@@ -240,13 +240,11 @@ body {
     position: fixed;
     inset: 0;
     background: #000;
-    pointer-events: none;
+    pointer-events: none;   /* 🔑 ВАЖНО */
     opacity: 0;
     transition: opacity 0.35s ease;
-    z-index: 998;
+    z-index: 9999;
 }
 
-.theme-fade.active {
-    opacity: 1;
-}
+
 
