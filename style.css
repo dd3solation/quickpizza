@@ -115,23 +115,34 @@ section {
 
 .product-row {
     display: flex;
-    gap: 24px;
-    overflow-x: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
     justify-content: center;
-    padding: 20px 0;
+    align-items: stretch;
+
+    gap: 24px;
+
+    width: 100vw;          /* 🔑 КЛЮЧ */
+    max-width: 100vw;
+    margin: 0 auto;
+
+    padding: 32px 24px;
+    overflow-x: auto;
 }
 
+
 .product-card {
-    background: var(--card-bg);
-    min-width: 240px;
+    flex: 0 0 260px;       /* 🔑 ГЛАВНЫЙ ФИКС */
     max-width: 260px;
+
+    background: var(--card-bg);
     padding: 24px;
     border-radius: 18px;
-    position: relative;
-    flex-shrink: 0;
-    border: 1px solid var(--border-soft);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    cursor: pointer;
 }
+
 
 .product-card {
     transition:
@@ -553,28 +564,6 @@ body:not(.dark) .trust-card {
     z-index: 3;
     cursor: pointer;
 }
-.product-row {
-    display: flex;
-    flex-direction: row;          /* ← ГОРИЗОНТАЛЬНО */
-    justify-content: center;      /* центр по горизонтали */
-    align-items: stretch;
-    gap: 24px;
-
-    overflow-x: auto;
-    overflow-y: visible;
-
-    width: 100%;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 24px 16px;
-}
-.product-card {
-    flex: 0 0 260px;   /* ← КЛЮЧ */
-    max-width: 260px;
-}
-
-
-
 
 
 
