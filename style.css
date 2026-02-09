@@ -542,23 +542,8 @@ body:not(.dark) .trust-card {
         opacity: 1;
     }
 }
-#modalDesc {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin: 12px 0 20px;
-}
-.modal.active #modalDesc {
-  animation: fadeUp 0.4s ease forwards;
-}
 
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
+
+
+
