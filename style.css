@@ -133,20 +133,29 @@ section {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.product-card {
+    transition:
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+    transform: scale(1.04); /* вместо подъёма вверх */
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.45),
+        inset 0 0 0 1px rgba(255,255,255,0.06);
 }
 
 .tag {
     position: absolute;
-    top: 12px;
-    right: 12px;
+    top: -12px;          /* поднимаем выше карточки */
+    right: 16px;
     font-size: 0.75rem;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 999px;
+    z-index: 2;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
-
 .hot { background: var(--accent); color: #fff; }
 .new { background: #ffd166; color: #000; }
 
@@ -421,6 +430,9 @@ body:not(.dark) .for-card {
         transform: none;
         box-shadow: none;
     }
+}
+.products {
+    overflow: visible;
 }
 
 
