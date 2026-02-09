@@ -93,8 +93,15 @@ body.light .hero {
    SECTIONS
 ========================= */
 section {
-  padding: 80px 20px;
+ section {
+  background: var(--bg-main);
 }
+
+.trust,
+.features {
+  background: var(--bg-soft);
+}
+
 
 section h2 {
   text-align: center;
@@ -348,51 +355,6 @@ section h2 {
     display: none;
   }
 }
-/* TRUST */
-.trust {
-  padding: 80px 40px;
-  text-align: center;
-}
-
-.trust h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-
-.trust-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.trust-card {
-  background: var(--card);
-  padding: 28px 22px;
-  border-radius: 20px;
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.trust-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,.35);
-}
-
-.trust-icon {
-  font-size: 28px;
-  display: block;
-  margin-bottom: 12px;
-}
-
-.trust-card h3 {
-  margin: 8px 0;
-  font-size: 1.1rem;
-}
-
-.trust-card p {
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
 
 /* MOBILE */
 @media (max-width: 900px) {
@@ -473,10 +435,10 @@ section h2 {
     font-size: 0.95rem;
   }
 }
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  transition: background 0.4s ease;
+.hero {
+  position: relative;
+  overflow: hidden;
+}
 }
 
 /* Мобильная версия */
@@ -537,6 +499,30 @@ body.light .feature {
 .feature emoji {
   font-size: 1.2rem;
 }
+body.light .hero-overlay
+body.dark .hero-overlay
+
+body.light .hero h1,
+body.light .hero p {
+  color: #111;
+}
+
+body.dark .hero h1,
+body.dark .hero p {
+  color: #fff;
+}
+.trust-card {
+  background: var(--bg-card);
+}
+
+.feature {
+  background: var(--bg-card);
+}
+
+.footer-muted {
+  color: var(--text-secondary);
+}
+
 
 
 
