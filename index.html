@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="light">
+<body class="dark">
 
-<!-- Переключатель темы -->
-<button class="theme-toggle">☀️</button>
+<button class="theme-toggle" id="themeToggle">🌙</button>
 
-
-<!-- HERO -->
 <header class="hero">
   <h1>Пицца, которую хочется есть</h1>
   <p>Готовый продукт. Настоящий вкус. Без компромиссов.</p>
 </header>
+
+<section class="products">
+  <h2>Линейка пицц</h2>
 <!-- PRODUCTS -->
 <section class="products">
   <h2>Линейка пицц</h2>
@@ -99,68 +99,15 @@
   </div>
 </section>
 
-<!-- WHY TRUST -->
-<!-- TRUST -->
-<section class="trust">
-  <h2>Почему нам доверяют</h2>
-
-  <div class="trust-row">
-    <div class="trust-card reveal stagger">
-      <span class="trust-icon">✔</span>
-      <h3>Контроль качества</h3>
-      <p>Каждая пицца проходит проверку на всех этапах производства.</p>
-    </div>
-
-    <div class="trust-card reveal stagger">
-      <span class="trust-icon">🥬</span>
-      <h3>Свежие ингредиенты</h3>
-      <p>Используем только проверенные продукты без компромиссов.</p>
-    </div>
-
-    <div class="trust-card reveal stagger">
-      <span class="trust-icon">🇷🇺</span>
-      <h3>Производство в России</h3>
-      <p>Производим пиццу локально, с учётом вкусов и стандартов.</p>
-    </div>
-
-    <div class="trust-card reveal stagger">
-      <span class="trust-icon">🏪</span>
-      <h3>Формат для магазинов</h3>
-      <p>Удобная упаковка и стабильное качество для розничных сетей.</p>
-    </div>
-  </div>
-</section>
-
-  <!-- FEATURES -->
-<section class="features">
-  <h2>Почему QuickPizza?</h2>
-
-  <div class="feature-list">
-    <div class="feature reveal stagger">🥖 Собственная рецептура теста</div>
-    <div class="feature reveal stagger">🧀 Много начинки</div>
-    <div class="feature reveal stagger">📦 Формат для магазинов</div>
-    <div class="feature reveal stagger">⚡ Быстро готовится дома</div>
-    <div class="feature reveal stagger">😋 Вкус как из пиццерии</div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <p>© QuickPizza, 2026</p>
-  <p class="footer-muted">Ищите в магазинах вашего города</p>
-</footer>
-
-
 <!-- MODAL -->
 <div class="modal" id="pizzaModal">
   <div class="modal-content">
-
     <button class="modal-close" id="modalClose">×</button>
+
     <button class="modal-nav prev" id="prevPizza">‹</button>
     <button class="modal-nav next" id="nextPizza">›</button>
 
     <img id="modalImg" alt="Пицца">
-
     <h2 id="modalTitle"></h2>
     <p id="modalDesc"></p>
 
@@ -175,20 +122,9 @@
       <div>🧈 <strong id="modalFat"></strong> г</div>
       <div>🍞 <strong id="modalCarb"></strong> г</div>
     </div>
-
   </div>
 </div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
