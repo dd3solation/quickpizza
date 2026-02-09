@@ -8,6 +8,14 @@ const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'light') {
   body.classList.add('light');
 }
+const toggle = document.querySelector('.theme-toggle');
+const body = document.body;
+
+toggle.addEventListener('click', () => {
+  body.classList.toggle('light');
+  body.classList.toggle('dark');
+});
+
 
 themeBtn.addEventListener('click', () => {
   body.classList.toggle('light');
@@ -153,3 +161,4 @@ nextBtn.addEventListener('click', e => {
   e.stopPropagation();
   switchPizza(1);
 });
+
