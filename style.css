@@ -230,4 +230,62 @@ footer {
     color: #555;
     font-size: 0.95rem;
 }
+/* =====================
+   ЛИНЕЙКА ПИЦЦ — ТЁМНАЯ
+===================== */
+
+.products {
+    background: #000;
+    padding: 80px 16px;
+    text-align: center;
+}
+
+.products h2 {
+    color: #fff;
+}
+
+/* ряд карточек */
+.product-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px 0;
+}
+
+/* скролл */
+.product-row::-webkit-scrollbar {
+    height: 6px;
+}
+.product-row::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+/* карточка */
+.product-card {
+    min-width: 240px;
+    max-width: 260px;
+    background: #111;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+}
+
+/* текст в карточке */
+.product-card h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
 
