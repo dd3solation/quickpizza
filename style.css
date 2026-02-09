@@ -290,3 +290,15 @@ footer {
         transform: translateY(0);
     }
 }
+/* FIX для светлой темы */
+body:not(.dark) .products,
+body:not(.dark) .for-who {
+    background: var(--bg-main);
+    color: var(--text-main);
+}
+
+body:not(.dark) .product-card,
+body:not(.dark) .for-card {
+    background: var(--card-bg);
+    color: var(--text-main);
+}
