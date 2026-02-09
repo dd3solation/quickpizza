@@ -553,6 +553,26 @@ body:not(.dark) .trust-card {
     z-index: 3;
     cursor: pointer;
 }
+.product-row {
+    display: flex;
+    flex-direction: row;          /* ← ГОРИЗОНТАЛЬНО */
+    justify-content: center;      /* центр по горизонтали */
+    align-items: stretch;
+    gap: 24px;
+
+    overflow-x: auto;
+    overflow-y: visible;
+
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 24px 16px;
+}
+.product-card {
+    flex: 0 0 260px;   /* ← КЛЮЧ */
+    max-width: 260px;
+}
+
 
 
 
