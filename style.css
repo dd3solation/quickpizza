@@ -457,6 +457,25 @@ body:not(.dark) .trust-card {
 .trust-card emoji {
     opacity: 0.9;
 }
+/* STAGGER ANIMATION */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+/* задержка будет задаваться через JS */
+.reveal.stagger {
+    transition-delay: var(--delay, 0s);
+}
+
 
 
 
